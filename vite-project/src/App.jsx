@@ -10,7 +10,8 @@ import { HomePage } from './pages/HomePage'
 import { AboutPage } from './pages/about/AboutPage'
 
 function App() {
-  <BrowserRouter>
+  return (
+    <BrowserRouter>
       <Routes>
 
         {/* Vi starter med en "/" her som gjør at dette blir en absolut filsti */}
@@ -25,4 +26,5 @@ function App() {
     </BrowserRouter>
   )
 }
+
 export default App
