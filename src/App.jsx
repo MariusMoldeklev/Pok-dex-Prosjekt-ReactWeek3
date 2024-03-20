@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import {
   BrowserRouter,
   Routes,
@@ -8,6 +8,7 @@ import './App.css'
 import { Layout } from './pages/Layout'
 import { HomePage } from './pages/HomePage'
 import { AboutPage } from './pages/about/AboutPage'
+import { NextPage } from './pages/next/NextPage'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           {/* Side vi ikke starter med en "/" så blir dette en relative url som tar med parents path verdi */}
           {/* path blir her parent route + this path => "/" + "about" = "/about" */}
           <Route path='about' element={<AboutPage />} />
+          <Route path='next' element={<NextPage />} />
         </Route>
 
       </Routes>
