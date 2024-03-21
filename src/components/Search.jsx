@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import style from './search.module.css'
+import style from './search.module.css';
 
 export function PokemonSearch() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -32,6 +32,22 @@ export function PokemonSearch() {
     }
   };
 
+  const handlePokemonClick = async (pokemonName) => {
+    try {
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+      if (!response.ok) {
+        throw new Error('Pokemon not found');
+      }
+      const data = await response.json();
+      setPokemonData(data);
+      setError(null);
+      setSearchTerm(''); // Clear the input bar
+    } catch (error) {
+      setPokemonData(null);
+      setError('Pokemon not found');
+    }
+  };
+
   useEffect(() => {
     if (searchTerm.length >= 3) {
       fetch(`https://pokeapi.co/api/v2/pokemon?limit=1000`)
@@ -53,7 +69,7 @@ export function PokemonSearch() {
 
   return (
     <div>
-        <h3>Enter Pokémon name or number</h3>
+      <h3>Enter Pokémon name or number</h3>
       <input
         type="text"
         placeholder="Enter name or number"
@@ -67,9 +83,15 @@ export function PokemonSearch() {
 
       {filteredPokemon.length > 0 && (
         <div>
-          <ul className={style.searchList} >
+          <ul className={style.searchList}>
             {filteredPokemon.map((pokemon, index) => (
-              <li key={index}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</li>
+              <li
+                key={index}
+                onClick={() => handlePokemonClick(pokemon.name)}
+                className={style.searchListItem}
+              >
+                {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+              </li>
             ))}
           </ul>
         </div>
@@ -88,8 +110,8 @@ export function PokemonSearch() {
           </ul> */}
         </div>
       )}
-
     </div>
   );
 }
 
+export default PokemonSearch;

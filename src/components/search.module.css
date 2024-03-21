@@ -4,3 +4,12 @@
     margin: 0px;
     padding: 0px;
 }
+.searchListItem {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+  .searchListItem:hover {
+    background-color: #888787;
+  }
+  
