@@ -53,9 +53,10 @@ export function PokemonSearch() {
 
   return (
     <div>
+        <h3>Enter Pokémon name or number</h3>
       <input
         type="text"
-        placeholder="Enter Pokemon name or number"
+        placeholder="Enter name or number"
         value={searchTerm}
         onChange={handleSearchChange}
         onKeyPress={handleKeyPress}
