@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import style from './search.module.css';
+import {RandomPokemonButton} from './RandomPokemonButton';
+
 
 export function PokemonSearch() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -41,7 +43,24 @@ export function PokemonSearch() {
       const data = await response.json();
       setPokemonData(data);
       setError(null);
-      setSearchTerm(''); // Clear the input bar when clicking on a filtered name
+      setSearchTerm(''); // Clear the input bar when clicking on a filtered
+    } catch (error) {
+      setPokemonData(null);
+      setError('Pokemon not found');
+    }
+  };
+
+  const handleRandomPokemon = async () => {
+    try {
+      const randomId = Math.floor(Math.random() * 898) + 1; // Generate random ID between 1 and 898
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${randomId}`);
+      if (!response.ok) {
+        throw new Error('Pokemon not found');
+      }
+      const data = await response.json();
+      setPokemonData(data);
+      setError(null);
+      setSearchTerm(''); // Clear the input bar
     } catch (error) {
       setPokemonData(null);
       setError('Pokemon not found');
@@ -78,14 +97,15 @@ export function PokemonSearch() {
         onKeyPress={handleKeyPress}
       />
       <button onClick={handleSearch}>Search</button>
+      <RandomPokemonButton onClick={handleRandomPokemon} />
 
       {error && <div>{error}</div>}
 
       {filteredPokemon.length > 0 && (
-        <div>
+          <div>
           <ul className={style.searchList}>
             {filteredPokemon.map((pokemon, index) => (
-              <li
+                <li
                 key={index}
                 onClick={() => handlePokemonClick(pokemon.name)}
                 className={style.searchListItem}

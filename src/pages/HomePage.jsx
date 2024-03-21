@@ -1,5 +1,6 @@
 import { Counter } from "../components/Counter";
 import { PokemonSearch } from "../components/Search";
+// import { RandomPokemonButton } from "../components/RandomPokemonButton"
 
 export function HomePage() {
   const title = "Home Page"
