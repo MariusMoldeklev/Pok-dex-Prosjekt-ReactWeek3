@@ -1,4 +1,5 @@
 import { Counter } from "../components/Counter";
+import { PokemonSearch } from "../components/Search";
 
 export function HomePage() {
   const title = "Home Page"
@@ -7,6 +8,7 @@ export function HomePage() {
   return (
     <main style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <h1>{title}</h1>
+      <PokemonSearch/>
      
 
 
