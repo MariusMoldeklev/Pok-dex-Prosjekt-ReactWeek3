@@ -12,4 +12,8 @@
   .searchListItem:hover {
     background-color: #888787;
   }
+  .pokemonImg {
+    height: 240px;
+    width: 240px;
+  }
   

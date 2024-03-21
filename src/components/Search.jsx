@@ -98,7 +98,8 @@ export function PokemonSearch() {
       )}
       {pokemonData && (
         <div>
-          <img src={pokemonData.sprites.front_default} alt={pokemonData.name} />
+          <img className={style.pokemonImg} src={pokemonData.sprites.front_default} alt={pokemonData.name} />
+          <p>Pokemon number {pokemonData.id}</p>
           <h2>{pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}</h2>
           {/* <p>Height: {pokemonData.height}</p>
           <p>Weight: {pokemonData.weight}</p>
