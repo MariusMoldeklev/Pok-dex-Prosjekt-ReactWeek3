@@ -1,4 +1,5 @@
 import { PokemonSearch } from "../../components/Search";
+//må linke inn API ?//
 
 export function PokemonDetail({ pokemon }) {
   if (!pokemon) {

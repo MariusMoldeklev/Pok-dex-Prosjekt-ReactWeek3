@@ -3,7 +3,7 @@ import style from './search.module.css';
 import { useHistory } from 'react-router-dom';
 import PokemonDetail from './PokemonDetail';
 
-function PokemonSearch() {
+export function PokemonSearch() {
   const [searchTerm, setSearchTerm] = useState('');
   const [pokemonData, setPokemonData] = useState(null);
   const [error, setError] = useState(null);
@@ -138,4 +138,3 @@ function PokemonSearch() {
   );
 }
 
-export default PokemonSearch;
