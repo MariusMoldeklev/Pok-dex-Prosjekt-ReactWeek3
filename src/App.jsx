@@ -3,7 +3,6 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Switch,
 } from 'react-router-dom'
 import './App.css'
 import { Layout } from './pages/Layout'
@@ -25,10 +24,8 @@ function App() {
           {/* path blir her parent route + this path => "/" + "about" = "/about" */}
           <Route path='about' element={<AboutPage />} />
           <Route path='next' element={<NextPage />} />
-          <Switch>
         <Route path="/" exact component={PokemonSearch} />
         <Route path="/pokemon/:name" component={PokemonDetail} />
-      </Switch>
         </Route>
 
       </Routes>

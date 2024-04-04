@@ -37,4 +37,5 @@ export function PokemonDetail({ pokemon }) {
       </div>
     </div>
   );
+  
 }
