@@ -1,0 +1,118 @@
+.Container {
+  width: 100vw;
+  background: #fffcf7;
+  padding-bottom: 2em;
+}
+
+.IndexSwitcher,
+.PokemonTypes {
+  display: flex;
+}
+
+.MainSection {
+  margin: 0 5em;
+}
+
+.PokemonTypes {
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.IndexSwitcher {
+  justify-content: space-between;
+  font-size: 3rem;
+  padding: 0.5em 0;
+}
+
+.IndexSwitcher a {
+  font-size: 4rem;
+}
+
+.PokemonName {
+  font-size: 2.5rem;
+  padding-bottom: 0.5em;
+}
+
+.PokemonStats {
+  width: 20em;
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  .PokemonSection,
+  .TypeAndAbilities {
+    display: flex;
+  }
+
+  .PokemonTypes {
+    margin: 0;
+  }
+
+  .PokemonSection {
+    justify-content: center;
+    margin-top: 2em;
+    gap: 1em;
+  }
+
+  .TypeAndAbilities {
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1em;
+  }
+
+  .PokemonStats {
+    width: 100%;
+    margin: 2em auto;
+    padding: 1em 0;
+  }
+
+  .MainSection {
+    margin: 0 3em;
+  }
+}
+
+@media (min-width: 900px) {
+  .Container {
+    width: 75vw;
+    margin: 0 auto;
+  }
+
+  .MainSection {
+    margin: 0 3.5em;
+  }
+}
+
+@media (min-width: 1250px) {
+  .Container {
+    width: 65vw;
+  }
+  .PokemonSection {
+    gap: 2em;
+  }
+}
+
+@media (min-width: 1500px) {
+  .Container {
+    width: 55vw;
+  }
+
+  .PokemonSection {
+    gap: 3em;
+  }
+}
+
+@media (min-width: 1800px) {
+  .Container {
+    width: 50vw;
+  }
+
+  .PokemonSection {
+    gap: 5em;
+  }
+
+  .MainSection {
+    margin: 0 7em;
+  }
+}

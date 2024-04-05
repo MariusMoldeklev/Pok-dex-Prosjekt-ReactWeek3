@@ -1,26 +1,24 @@
-
 .app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-  }
-  
-  .navbar > nav > ul {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .main {
-    flex-grow: 1;
-  }
-  
-  .footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.navbar > nav > ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.footer {
   background-color: red;
-  }
-  
+}
