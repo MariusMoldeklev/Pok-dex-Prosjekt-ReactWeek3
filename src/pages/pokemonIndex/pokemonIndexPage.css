@@ -2,11 +2,18 @@
   width: 100vw;
   background: #fffcf7;
   padding-bottom: 2em;
+  flex-direction: column;
+  align-items: center;
 }
 
-.IndexSwitcher,
-.PokemonTypes {
+.PokemonTypes,
+.Container,
+.IndexPageHeader {
   display: flex;
+}
+
+.IndexPageHeader {
+  flex-direction: column;
 }
 
 .MainSection {
@@ -21,13 +28,17 @@
 }
 
 .IndexSwitcher {
-  justify-content: space-between;
   font-size: 3rem;
   padding: 0.5em 0;
 }
 
 .IndexSwitcher a {
   font-size: 4rem;
+  color: #070600;
+}
+
+.IndexSwitcher a:hover {
+  color: #b01307;
 }
 
 .PokemonName {
@@ -37,7 +48,7 @@
 
 .PokemonStats {
   width: 20em;
-  margin: 0 auto;
+  margin: 2em auto;
 }
 
 @media (min-width: 700px) {
@@ -70,6 +81,9 @@
 
   .MainSection {
     margin: 0 3em;
+  }
+  .IndexSwitcher a {
+    padding: 1.5em;
   }
 }
 

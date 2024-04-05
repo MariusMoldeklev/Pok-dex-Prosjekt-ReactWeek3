@@ -20,6 +20,10 @@
   padding-bottom: 1em;
 }
 
+.AllAbilities {
+  padding-top: 0.5em;
+}
+
 @media (min-width: 700px) {
   .MeasurmentAndAbilities {
     margin: 0;

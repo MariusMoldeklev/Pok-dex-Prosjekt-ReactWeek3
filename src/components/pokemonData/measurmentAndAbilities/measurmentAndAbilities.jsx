@@ -21,7 +21,7 @@ export function MeasurmentAndAbilities(params) {
       <div className="Abilities">
         <h3>Abilities</h3>
 
-        <p>
+        <p className="AllAbilities">
           {pokemon.abilities.map((ability, index) => {
             if (index === pokemon.abilities.length - 1) {
               return firstToUpperCase(ability.ability.name);

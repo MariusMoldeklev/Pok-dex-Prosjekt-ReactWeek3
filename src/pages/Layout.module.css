@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 1rem;
-  background-image: linear-gradient(to right, red, 70% , rgb(252, 187, 187));
+  background-image: linear-gradient(to right, red, 70%, rgb(252, 187, 187));
 }
 
 .navbar > nav > ul {
