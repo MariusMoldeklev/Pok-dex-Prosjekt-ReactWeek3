@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import "./RandomPokemonButton.css"
 
 export function RandomPokemonButton({ onClick }) {
   const handleRandomClick = () => {
@@ -6,7 +7,7 @@ export function RandomPokemonButton({ onClick }) {
   };
 
   return (
-    <button onClick={handleRandomClick}>Suprise Me!</button>
+    <button className='randomButton' onClick={handleRandomClick}>Suprise Me!</button>
   );
 }
 

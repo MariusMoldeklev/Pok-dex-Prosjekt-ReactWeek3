@@ -1,4 +1,3 @@
-import { Counter } from "../components/Counter";
 import { PokemonSearch } from "../components/Search";
 // import { RandomPokemonButton } from "../components/RandomPokemonButton"
 
@@ -14,8 +13,6 @@ export function HomePage() {
 
 
       <section>
-        <h2>Counter</h2>
-        <Counter />
       </section>
     </main>
   )

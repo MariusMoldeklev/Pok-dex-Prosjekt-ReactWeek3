@@ -87,7 +87,9 @@ export function PokemonSearch() {
   }, [searchTerm]);
 
   return (
-    <div>
+    <div className='searchDiv'>
+      <div className='inputButton'>
+
       <h3>Enter Pokémon name or number</h3>
       <input
         type="text"
@@ -95,14 +97,16 @@ export function PokemonSearch() {
         value={searchTerm}
         onChange={handleSearchChange}
         onKeyPress={handleKeyPress}
-      />
-      <button onClick={handleSearch}>Search</button>
-
+        className='inputPokemon'
+        />
+      <button onClick={handleSearch}>Search</button> <br /><br />
       <RandomPokemonButton onClick={handleRandomPokemon} />
+        </div>
+
       {error && <div>{error}</div>}
 
       {filteredPokemon.length > 0 && (
-          <div>
+          <div className='inputButton'>
           <ul className={style.searchList}>
             {filteredPokemon.map((pokemon, index) => (
                 <li
@@ -117,7 +121,7 @@ export function PokemonSearch() {
         </div>
       )}
       {pokemonData && (
-        <div>
+        <div className='pokemonCard'>
           <img className={style.pokemonImg} src={pokemonData.sprites.front_default} alt={pokemonData.name} />
           <p>Pokemon number {pokemonData.id}</p>
           <h2>{pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}</h2>

@@ -16,3 +16,25 @@ a {
 ul {
   list-style: none;
 }
+
+.pokemonCard {
+  margin-top: 20px;
+  /* background-color: rgb(207, 196, 196); */
+  opacity: 0.9;
+  border-radius:  15px;
+  box-shadow: 0px 0px 10px black;
+  /* width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; */
+}
+
+.searchDiv {
+  width:  80vw;
+  background-color: white;
+}
+
+.inputButton{
+  background-color: rgb(183, 176, 176);
+
+}
