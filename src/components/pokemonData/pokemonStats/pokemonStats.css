@@ -1,0 +1,49 @@
+.PokemonStats {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1em;
+  background: #e5e5e5;
+}
+
+.PokemonStats h3 {
+  margin-left: 0.3em;
+}
+
+.Stats {
+  margin: 0.5em 0em;
+}
+
+.StatBar {
+  position: relative;
+  width: 10em;
+  height: 1.5em;
+  background-color: #111;
+  border-radius: 1.5em;
+  color: white;
+}
+
+.StatBar::before {
+  content: attr(data-label);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0.25em;
+  top: 0.25em;
+  z-index: 0;
+  bottom: 0.5em;
+  width: calc(var(--width, 0) * 0.85%);
+  min-width: 1rem;
+  max-width: calc(--width - 0.5em);
+  background-color: #069;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+@media (min-width: 700px) {
+  .PokemonStats {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}

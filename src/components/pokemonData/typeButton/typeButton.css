@@ -1,0 +1,81 @@
+.TypeButton {
+  color: #070600;
+  font-weight: 600;
+  background: #caccce;
+  width: 4em;
+  padding: 0.1em 1em;
+  border-radius: 1em;
+  height: fit-content;
+}
+
+.bug {
+  background: #a7c957;
+}
+
+.dragon {
+  background: #f4a261;
+}
+
+.fairy {
+  background: #f4acb7;
+}
+
+.fire {
+  background: #e63946;
+}
+
+.ghost {
+  background: #cdb4db;
+}
+
+.ground {
+  background: #606c38;
+}
+
+.normal {
+  background: #d6ccc2;
+}
+
+.psychic {
+  background: #fb6f92;
+}
+
+.steel {
+  background: #6c757d;
+}
+
+.dark {
+  background: #495057;
+}
+
+.electric {
+  background: #ffd166;
+}
+
+.fighting {
+  background: #e76f51;
+}
+
+.flying {
+  background: #a2d2ff;
+}
+
+.grass {
+  background: #386641;
+}
+
+.ice {
+  background: #bde0fe;
+}
+
+.poison {
+  background: #b8b8ff;
+}
+
+.rock {
+  background: #bc6c25;
+}
+
+.water {
+  background: #219ebc;
+}
