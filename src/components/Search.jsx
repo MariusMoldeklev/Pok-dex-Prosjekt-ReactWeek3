@@ -126,10 +126,17 @@ export function PokemonSearch() {
           <p className='pokemonID'># {pokemonData.id}</p>
           <img className={style.pokemonImg} src={pokemonData.sprites.front_default} alt={pokemonData.name} />
           <h2>{pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}</h2>
-          <TypeButton/>
+          <TypeButton type={pokemonData.types[0].type.name}/>
     
         </div>
       )}
+       <div className='pokemonCard'>
+          <p className='pokemonID'># {pokemonData.id}</p>
+          <img className={style.pokemonImg} src={pokemonData.sprites.front_default} alt={pokemonData.name} />
+          <h2>{pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}</h2>
+    
+        </div>
     </div>
   );
 }
+
