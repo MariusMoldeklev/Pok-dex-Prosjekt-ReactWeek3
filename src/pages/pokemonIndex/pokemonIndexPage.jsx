@@ -8,6 +8,7 @@ import { firstToUpperCase } from "../../utils/firstToUpperCase";
 import { MeasurmentAndAbilities } from "../../components/pokemonData/measurmentAndAbilities/measurmentAndAbilities";
 import "./pokemonIndexPage.css";
 import { PokemonStats } from "../../components/pokemonData/pokemonStats/pokemonStats";
+import { Evolutions } from "../../components/pokemonData/evolution/evolution";
 
 export function PokemonIndex() {
   let { pokemonId } = useParams();
@@ -27,7 +28,7 @@ export function PokemonIndex() {
   } else {
     return (
       <main className="Container">
-        <header>
+        <header className="IndexPageHeader">
           <h2 className="IndexSwitcher">
             <a href={prevPokemon(pokemonId)}>〈 </a> #
             {pokemonIdFormatter(pokemonId)}
@@ -49,6 +50,7 @@ export function PokemonIndex() {
             </div>
           </div>
           <PokemonStats className="PokemonStats" pokemon={pokemon} />
+          <Evolutions pokemonId={pokemonId} />
         </section>
       </main>
     );

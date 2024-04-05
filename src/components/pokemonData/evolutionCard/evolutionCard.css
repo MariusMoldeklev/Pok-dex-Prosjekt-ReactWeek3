@@ -1,0 +1,39 @@
+.EvolutionImage {
+  height: 7em;
+  width: 7em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0.2em solid #b01307;
+  border-radius: 50%;
+}
+
+.EvolutionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2em;
+  padding: 1em 0;
+  width: 9em;
+  background: #e5e5e5;
+  border: 0.2em solid #fffcf7;
+  border-radius: 1em;
+}
+
+.EvolutionContainer:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.EvolutionLink {
+  color: #070600;
+  font-weight: 600;
+}
+
+.EvolutionName {
+  font-size: 1.5em;
+}
+
+@media (min-width: 1250px) {
+  .EvolutionContainer {
+    width: 10em;
+  }
+}

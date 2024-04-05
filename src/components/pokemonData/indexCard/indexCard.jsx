@@ -14,7 +14,7 @@ export function IndexCard(params) {
     return (
       <div
         style={{ backgroundImage: `url(${backgroundImage})` }}
-        className="ImageCard"
+        className="IndexImageCard"
       >
         <button
           className="ShinyButton"
