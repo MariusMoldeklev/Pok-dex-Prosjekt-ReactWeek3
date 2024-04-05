@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import style from './search.module.css';
 import {RandomPokemonButton} from './RandomPokemonButton';
+import { TypeButton } from './pokemonData/typeButton/typeButton';
 
 
 export function PokemonSearch() {
@@ -90,7 +91,7 @@ export function PokemonSearch() {
     <div className='searchDiv'>
       <div className='inputButton'>
 
-      <h3>Enter Pokémon name or number</h3>
+      {/* <h3>Enter Pokémon name or number</h3> */}
       <input
         type="text"
         placeholder="Enter name or number"
@@ -99,7 +100,7 @@ export function PokemonSearch() {
         onKeyPress={handleKeyPress}
         className='inputPokemon'
         />
-      <button onClick={handleSearch}>Search</button> <br /><br />
+      <button className='searchButton' onClick={handleSearch}>Search</button> <br /><br />
       <RandomPokemonButton onClick={handleRandomPokemon} />
         </div>
 
@@ -122,9 +123,11 @@ export function PokemonSearch() {
       )}
       {pokemonData && (
         <div className='pokemonCard'>
+          <p className='pokemonID'># {pokemonData.id}</p>
           <img className={style.pokemonImg} src={pokemonData.sprites.front_default} alt={pokemonData.name} />
-          <p>Pokemon number {pokemonData.id}</p>
           <h2>{pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}</h2>
+          <TypeButton/>
+    
         </div>
       )}
     </div>

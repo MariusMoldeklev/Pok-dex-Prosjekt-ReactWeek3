@@ -38,3 +38,14 @@ ul {
   background-color: rgb(183, 176, 176);
 
 }
+.searchButton {
+  border: none;
+  background-color: red;
+  color: white;
+  padding:  2px 6px;
+  border-radius: 0px;
+}
+
+.inputPokemon{
+  margin-top: 20px;
+}
