@@ -97,8 +97,8 @@ export function PokemonSearch() {
         onKeyPress={handleKeyPress}
       />
       <button onClick={handleSearch}>Search</button>
-      <RandomPokemonButton onClick={handleRandomPokemon} />
 
+      <RandomPokemonButton onClick={handleRandomPokemon} />
       {error && <div>{error}</div>}
 
       {filteredPokemon.length > 0 && (
