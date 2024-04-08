@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import style from './search.module.css';
 import {RandomPokemonButton} from './RandomPokemonButton';
 import { TypeButton } from './pokemonData/typeButton/typeButton';
-
+import { Link } from 'react-router-dom';
 
 export function PokemonSearch() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -122,20 +122,15 @@ export function PokemonSearch() {
         </div>
       )}
       {pokemonData && (
-        <div className='pokemonCard'>
-          <p className='pokemonID'># {pokemonData.id}</p>
-          <img className={style.pokemonImg} src={pokemonData.sprites.front_default} alt={pokemonData.name} />
-          <h2>{pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}</h2>
-          <TypeButton type={pokemonData.types[0].type.name}/>
-    
-        </div>
+        <Link to={"/pokemonIndex/" + pokemonData.id}>
+          <div className='pokemonCard'>
+            <p className='pokemonID'># {pokemonData.id}</p>
+            <img className={style.pokemonImg} src={pokemonData.sprites.front_default} alt={pokemonData.name} />
+            <h2>{pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}</h2>
+            <TypeButton type={pokemonData.types[0].type.name}/>
+          </div>
+        </Link>
       )}
-       <div className='pokemonCard'>
-          <p className='pokemonID'># {pokemonData.id}</p>
-          <img className={style.pokemonImg} src={pokemonData.sprites.front_default} alt={pokemonData.name} />
-          <h2>{pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}</h2>
-    
-        </div>
     </div>
   );
 }
